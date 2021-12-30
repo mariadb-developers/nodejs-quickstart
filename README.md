@@ -42,6 +42,8 @@ $ node crud/create.js
 ...
 ```
 
+**Note:** Be sure to update the connection configuration to point to _your_ database in the JavaScript sample files. For example, [here](connect/connection.js#L7-L11).
+
 ## Support and Contribution
 
 Please feel free to submit PR's, issues or requests to this project project directly.
