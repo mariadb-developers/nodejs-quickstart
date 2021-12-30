@@ -5,13 +5,14 @@ async function main() {
     try {
         // Create a connection object using the MariaDB settings and credentials
         conn = await mariadb.createConnection({
-            host: "127.0.0.1",
-            user: "root",
-            password: "RootPassword123!"
+            host: "<host_address>",
+            user: "<username>",
+            password: "<password>",
+            database: "demo"
         });
 
         // Use Connection to get customer data
-        var rows = await conn.query("SELECT * FROM demo.contacts");
+        var rows = await conn.query("SELECT * FROM contacts");
 
         //Print list of contacts
         for (i = 0, len = rows.length; i < len; i++) {

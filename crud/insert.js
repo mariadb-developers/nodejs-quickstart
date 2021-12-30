@@ -5,13 +5,14 @@ async function main() {
     try {
         // Create a connection object using the MariaDB settings and credentials
         conn = await mariadb.createConnection({
-            host: "127.0.0.1",
-            user: "root",
-            password: "RootPassword123!"
+            host: "<host_address>",
+            user: "<username>",
+            password: "<password>",
+            database: "demo"
         });
         
         // Insert new customer records
-        let result = await conn.query("INSERT INTO demo.contacts (first_name, last_name, email) \
+        let result = await conn.query("INSERT INTO contacts (first_name, last_name, email) \
                                         VALUES ('Johnny', 'Bravo', 'johnny@mariadb.com')");
         console.log(`Contact (id=${result.insertId}) inserted.`);
     } catch (err) {
