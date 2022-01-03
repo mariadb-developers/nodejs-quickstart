@@ -51,14 +51,14 @@ $ node crud/create.js
 
 ## Support and Contribution
 
-Please feel free to submit PR's, issues or requests to this project project directly.
+Please feel free to submit PR's, issues or requests to this project directly.
 
 If you have any other questions, comments, or looking for more information on MariaDB please check out:
 
 * [MariaDB Developer Hub](https://mariadb.com/developers)
 * [MariaDB Community Slack](https://r.mariadb.com/join-community-slack)
 
-Or reach out to us diretly via:
+Or reach out to us directly via:
 
 * [developers@mariadb.com](mailto:developers@mariadb.com)
 * [MariaDB Twitter](https://twitter.com/mariadb)
