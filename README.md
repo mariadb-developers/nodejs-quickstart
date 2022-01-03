@@ -30,7 +30,7 @@ Next, install the MariaDB Node.js driver (connector) using [npm](npmjs.com).
 
 
 ```bash
-$ pip install mariadb
+$ npm install mariadb
 ```
 
 Finally, to execute the sample JavaScript files.
