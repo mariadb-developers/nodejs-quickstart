@@ -1,11 +1,11 @@
 # Quick Start: Node.js and MariaDB
 
-This repository will walk you through the process of quickly getting started with [Node.js](https://nodejs.org) and [MariaDB](https://mariadb.com) using the [MariaDB Node.js connector](https://github.com/mariadb-corporation/mariadb-connector-nodejs).
+This repository will walk you through the process of quickly getting started with [Node.js](https://nodejs.org) and [MariaDB](https://github.com/mariadb-developers/mariadb-getting-started) using the [MariaDB Node.js connector](https://github.com/mariadb-corporation/mariadb-connector-nodejs).
 
 ## Requirements 
 
 * [Node.js](https://nodejs.org/en/download/)
-* [MariaDB](https://mariadb.com)
+* [MariaDB](https://mariadb.com) - to get started with MariaDB check out [this guide](https://github.com/mariadb-developers/mariadb-getting-started)!
 
 ## Samples
 
@@ -18,7 +18,7 @@ This repository will walk you through the process of quickly getting started wit
     * [Delete a record from a table](crud/delete.js)
     * [Drop a database](crud/drop.js)
 
-## Get Started
+## Get Started with Node.js and MariaDB
 
 First, clone this repo.
 
@@ -43,6 +43,11 @@ $ node crud/create.js
 ```
 
 **Note:** Be sure to update the connection configuration to point to _your_ database in the JavaScript sample files. For example, [here](connect/connection.js#L7-L11).
+
+## Helpful Resources
+
+* [Official MariaDB Documentation](https://mariadb.com/docs)
+* [MariaDB Quickstart Guide](https://github.com/mariadb-developers/mariadb-getting-started)
 
 ## Support and Contribution
 
