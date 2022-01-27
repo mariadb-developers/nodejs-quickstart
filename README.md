@@ -33,7 +33,7 @@ Next, from within the `nodejs-quickstart` directory (that you just pulled down),
 $ npm install mariadb
 ```
 
-Finally, to execute the sample JavaScript files.
+Finally, to execute the sample JavaScript files using the `node` [CLI command](https://nodejs.org/api/cli.html).
 
 **Note:** Be sure to update the connection configuration to point to _your_ database in the JavaScript sample files. For example, [here](connect/connection.js#L7-L11).
 
