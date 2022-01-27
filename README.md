@@ -26,7 +26,7 @@ First, clone this repo.
 $ git clone https://github.com/mariadb-developers/nodejs-quickstart.git
 ```
 
-Next, install the MariaDB Node.js driver (connector) using [npm](npmjs.com).
+Next, from within the `nodejs-quickstart` directory (that you just pulled down), install the MariaDB Node.js driver (connector) using [npm](npmjs.com).
 
 
 ```bash
