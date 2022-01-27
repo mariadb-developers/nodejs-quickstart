@@ -35,6 +35,8 @@ $ npm install mariadb
 
 Finally, to execute the sample JavaScript files.
 
+Note: Be sure to update the connection configuration to point to _your_ database in the JavaScript sample files before executing. For example, here.
+
 ```bash 
 $ node connect/connection.js
 $ node crud/create.js
