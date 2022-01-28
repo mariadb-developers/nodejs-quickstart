@@ -9,16 +9,33 @@ This repository will walk you through the process of quickly getting started wit
 
 ## Samples
 
-* [Get connected to a MariaDB database](connect/connection.js)
-* Execute querying operations: 
-    * [Create database and table](crud/create.js) 
-    * [Insert records into a table](crud/insert.js)
-    * [Read records from a table](crud/read.js)
-    * [Update a record in a table](crud/update.js)
-    * [Delete a record from a table](crud/delete.js)
-    * [Drop a database](crud/drop.js)
+### JavaScript
 
-## Get Started with Node.js and MariaDB
+The [javascript](javascript) folder provides simple examples using MariaDB Connector/Node.js with JavaScript.
+
+* [Connecting to MariaDB](javascript/connect)
+    * [connection.js](javascript/connect/connection.js) - a simple example of connecting to a MariaDB database instance.
+    * [connection_skysql.js](javascript/connect/connection_skysql.js) - a simple example of how to connect to [MariaDB SkySQL](https://mariadb/com/skyview)
+
+* [Execute querying operations](javascript/query)
+
+    Examples that utilize a shared [database module](javascript/query/db.js) to perform various SQL operations.
+
+    * [Create a database and table](javascript/query/create.js) - **required** before executing any other script
+    * [Drop a database](javascript/query/drop.js)
+    * [Insert records into a table](javascript/query/insert.js)
+    * [Read records from a table](javascript/query/read.js)
+    * [Update a record in a table](javascript/query/update.js)
+    * [Delete a record from a table](javascript/query/delete.js)
+    * [Bulk insert](javascript/query/batch_insert.js) - uses the Connection object Batch function
+    * [Bulk insert](javascript/query/batch_insert.js) -  uses the Connection Pool object Batch function
+    
+
+### TypeScript
+
+> ⚠️ Coming soon!
+
+## Get Started with the Sample Scripts
 
 First, clone this repo.
 
@@ -26,27 +43,33 @@ First, clone this repo.
 $ git clone https://github.com/mariadb-developers/nodejs-quickstart.git
 ```
 
-Next, install the MariaDB Node.js driver (connector) using [npm](npmjs.com).
+Next, from within the `nodejs-quickstart` directory (that you just pulled down), install the MariaDB Node.js driver (connector) using [npm](npmjs.com).
 
 
 ```bash
 $ npm install mariadb
 ```
 
-Finally, to execute the sample JavaScript files.
+Finally, to execute the sample JavaScript files using the `node` [CLI command](https://nodejs.org/api/cli.html).
+
+**Note:** Be sure to update the connection configuration to point to _your_ database in the JavaScript sample files. For example, [here](javascript/connect/connection.js#L7-L12).
 
 ```bash 
-$ node connect/connection.js
-$ node crud/create.js
+$ node javascript/connect/connection.js
+
+$ node javascript/query/create.js
+
+$ node javascript/query/insert.js
+
+$ node javascript/query/select.js
 
 ...
 ```
 
-**Note:** Be sure to update the connection configuration to point to _your_ database in the JavaScript sample files. For example, [here](connect/connection.js#L7-L11).
-
 ## Helpful Resources
 
 * [Official MariaDB Documentation](https://mariadb.com/docs)
+* [MariaDB Connector/Node.js Source Code](https://github.com/mariadb-corporation/mariadb-connector-nodejs)
 * [MariaDB Quickstart Guide](https://github.com/mariadb-developers/mariadb-getting-started)
 
 ## Support and Contribution

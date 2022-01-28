@@ -1,15 +1,11 @@
-const mariadb = require("mariadb");
+const db = require("./db");
 
-async function main() {
+async function asyncFunction() {
     let conn;
-    try {
-        // Create a connection object using the MariaDB settings and credentials
-        conn = await mariadb.createConnection({
-            host: "<host_address>",
-            user: "<username>",
-            password: "<password>"
-        });
-        
+    try { 
+        // Acquire a connection from the connection pool
+        conn = await db.pool.getConnection();
+
         // Execute query to create a new database
         await conn.query("CREATE DATABASE demo");
         console.log("Demo database created.");
@@ -23,12 +19,12 @@ async function main() {
                         PRIMARY KEY (id))");
         console.log("Contacts table created.");
     } catch (err) {
-        // Print errors
+        // Print error
         console.log(err);
     } finally {
-        // Close the connection
-        if (conn) conn.close();
+        // Release the connection back into the connection pool
+        if (conn) await conn.release();
     }
 }
 
-main();
+asyncFunction();
