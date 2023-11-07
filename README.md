@@ -31,10 +31,6 @@ The [javascript](javascript) folder provides simple examples using MariaDB Conne
     * [Bulk insert](javascript/query/batch_insert.js) -  uses the Connection Pool object Batch function
     
 
-### TypeScript
-
-> ⚠️ Coming soon!
-
 ## Get Started with the Sample Scripts
 
 First, clone this repo.
