@@ -64,7 +64,7 @@ $ node javascript/query/insert.js
 
 $ node javascript/query/select.js
 
-...
+... check additional scripts in the javascript/query/ directory ...
 ```
 
 ## Helpful Resources

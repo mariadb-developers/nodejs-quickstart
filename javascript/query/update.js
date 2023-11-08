@@ -20,6 +20,7 @@ async function asyncFunction() {
     } finally {
         // Close the connection
         if (conn) await conn.release();
+		db.pool.end();
     }
 }
 

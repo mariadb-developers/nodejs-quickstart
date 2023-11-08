@@ -34,6 +34,7 @@ async function asyncFunction() {
         conn.rollback();
     } finally {
         if (conn) await conn.release();
+		db.pool.end();
     }
 }
 
