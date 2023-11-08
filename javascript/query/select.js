@@ -12,7 +12,9 @@ async function asyncFunction() {
     } catch (err) {
         // Print errors
         console.log(err);
-    }
+    } finally {
+		db.pool.end();
+	}
 }
 
 asyncFunction();

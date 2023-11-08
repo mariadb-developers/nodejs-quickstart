@@ -5,10 +5,10 @@ async function asyncFunction() {
     try {
         // Create a new connection
         conn = await mariadb.createConnection({
-            host: '<insert_host_address_here>',
-            port: '<insert_port_number_here>',
-            user: '<insert_user_here>',
-            password: '<insert_password_here>',
+            host: '127.0.0.1',
+            port: '3306',
+            user: 'user',
+            password: 'Password123!',
         });
 
         // Print connection thread

@@ -7,6 +7,12 @@ This repository will walk you through the process of quickly getting started wit
 * [Node.js](https://nodejs.org/en/download/)
 * [MariaDB](https://mariadb.com) - to get started with MariaDB check out [this guide](https://github.com/mariadb-developers/mariadb-getting-started)!
 
+You can easily run a MariaDB Server using Docker:
+
+```Shell
+docker run --name mariadb --detach --publish 3306:3306 --env MARIADB_ROOT_PASSWORD='RootPassword123!' mariadb
+```
+
 ## Samples
 
 ### JavaScript
@@ -14,12 +20,11 @@ This repository will walk you through the process of quickly getting started wit
 The [javascript](javascript) folder provides simple examples using MariaDB Connector/Node.js with JavaScript.
 
 * [Connecting to MariaDB](javascript/connect)
-    * [connection.js](javascript/connect/connection.js) - a simple example of connecting to a MariaDB database instance.
-    * [connection_skysql.js](javascript/connect/connection_skysql.js) - a simple example of how to connect to [MariaDB SkySQL](https://mariadb/com/skyview)
+    * [connection.js](javascript/connect/connection.js) - a simple example of connecting to a MariaDB database instance. Change the connection parameters (host, port, user, password) in the same file before running the example.
 
 * [Execute querying operations](javascript/query)
 
-    Examples that utilize a shared [database module](javascript/query/db.js) to perform various SQL operations.
+    Examples that utilize a shared [database module](javascript/query/db.js) to perform various SQL operations. Change the connection parameters (host, port, user, password) in the database module file before running the examples.
 
     * [Create a database and table](javascript/query/create.js) - **required** before executing any other script
     * [Drop a database](javascript/query/drop.js)

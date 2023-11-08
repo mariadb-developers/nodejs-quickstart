@@ -7,11 +7,11 @@ async function asyncFunction() {
         conn = await db.pool.getConnection();
 
         // Execute query to create a new database
-        await conn.query("CREATE DATABASE demo");
+        await conn.query("CREATE DATABASE IF NOT EXISTS demo");
         console.log("Demo database created.");
 
         // Execute query to create a new table
-        await conn.query("CREATE TABLE demo.contacts ( \
+        await conn.query("CREATE TABLE IF NOT EXISTS demo.contacts ( \
                         id INT(11) unsigned NOT NULL AUTO_INCREMENT, \
                         first_name VARCHAR(50) NOT NULL, \
                         last_name VARCHAR(50) NOT NULL, \
@@ -24,6 +24,7 @@ async function asyncFunction() {
     } finally {
         // Release the connection back into the connection pool
         if (conn) await conn.release();
+		db.pool.end();
     }
 }
 
